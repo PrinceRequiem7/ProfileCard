@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Markazi Text", serif;
+}
+
+html, body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background-color: #bc2a8d;
+}
+
+.container{
+    max-width: 1156px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container .box {
+    width: calc(30% -10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
+/* Profile Picture */
+.box [data-testid="profilePicture"]{
+    margin: 6px 0;
+    height: 220px ;
+    width:  220px;
+    background: #808080;
+    padding: 0 px;
+    border: 50%;
+    border-radius: 10px;
+}
+
+
+.box  [data-testid="profilePicture"] img{
+    width: 100%;
+    height: 100%;
+    border: 100%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+/* Full Name Container */
+.box [data-testid="fullName"]{
+    margin: 10px 0 3px 0;
+    color:black;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Bio */
+.box [data-testid="shortBio"] {
+    text-align: justify;
+    margin: 8px 0 8px 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.bio-box{
+    width: calc(30% -10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:  rgb(206, 205, 205);
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
+
+
+/* Social Icons Container */
+[socialLinks] {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* General Icon Styling */
+.icon {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+/* Individual Icon Colors */
+.twitter {
+    background-color: #1DA1F2;
+}
+.github {
+    background-color: #333;
+}
+.linkedin {
+    background-color: #0077B5;
+}
+
+/* Hover Effects */
+.icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+
+[data-testid="emailAddress"] a {
+    text-decoration: none;
+}
+
+[data-testid="currentTimeUTC"]{
+        font-size: 24px;
+        font-weight: bold;
+        color: #000000;
+        margin-top: 20px;
+        display: inline-block;
+        letter-spacing: 4px;
+        align-items:right;
+
+
+}
+
+@media (max-width:1156px) {
+    .container .box {
+        width: calc(33% -10px);
+        margin-bottom: 20px;
+    }
+}
